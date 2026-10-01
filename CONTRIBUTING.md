@@ -181,8 +181,9 @@ never happened.
 
 **When GUI library dependencies are missing, this fallback takes precedence over
 the Pre-Commit Gate in `CLAUDE.md`.** Run `scripts/ci-local.sh --no-postgres`
-to exercise the non-GUI gates locally before pushing; a maintainer will run the
-full suite before merge.
+and copy its summary into your PR body. Steps that fail only because the GUI
+libraries are missing are expected; name them and the missing library, and a
+maintainer will run the full suite before merge.
 
 CI gates both halves, so bumping the artifact alone turns `docs-and-hygiene` red
 after `rust` goes green.
